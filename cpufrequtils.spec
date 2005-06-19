@@ -1,3 +1,8 @@
+#
+# Conditional build:
+%bcond_with	sysfs	# sysfs
+%bcond_without	procfs	# procfs
+#
 Summary:	Scales your cpu frequency
 Summary(pl):	Skalowanie czêstotliwo¶ci procesora
 Name:		cpufrequtils
@@ -11,6 +16,7 @@ URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+%{?with_sysfs:BuildRequires:	libsysfs-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +30,25 @@ TODO
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+
+cd utils
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+#%{__automake}
+cd ..
+
+cd libcpufreq
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+#%{__automake}
+cd ..
+
+%configure \
+	%{?with_sysfs:--enable-sysfs=/sys} \
+	%{?with_procfs:--enable-proc} \
+
 %{__make}
 
 %install
