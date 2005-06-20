@@ -3,7 +3,7 @@
 %bcond_with	sysfs	# sysfs
 %bcond_without	procfs	# procfs
 #
-Summary:	Scales your cpu frequency
+Summary:	Scales your CPU frequency
 Summary(pl):	Skalowanie czêstotliwo¶ci procesora
 Name:		cpufrequtils
 Version:	0.3
@@ -15,12 +15,15 @@ Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}
 URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 %{?with_sysfs:BuildRequires:	libsysfs-devel}
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-TODO
+Scales your CPU frequency.
+
+%description -l pl
+Skalowanie czêstotliwo¶ci procesora.
 
 %prep
 %setup -q
