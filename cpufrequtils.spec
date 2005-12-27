@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(754,root,root) %{_bindir}/cpufreq-*
+%attr(755,root,root) %{_bindir}/cpufreq-*
 %attr(755,root,root) %{_libdir}/libcpufreq.so.*.*.*
 %{_mandir}/man1/cpufreq-*.1*
 
