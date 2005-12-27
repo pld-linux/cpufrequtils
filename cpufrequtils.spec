@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_with	sysfs	# sysfs (detection broken)
+%bcond_without	sysfs	# sysfs
 %bcond_without	procfs	# procfs
 #
 Summary:	Scales your CPU frequency
 Summary(pl):	Skalowanie czêstotliwo¶ci procesora
 Name:		cpufrequtils
-Version:	0.3
-Release:	0.1
+Version:	0.4
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
-# Source0-md5:	ccd1423d76d19889652f06b7c018106b
+# Source0-md5:	f0f9cecda44584c3ba28239568ef0a42
 URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
-%{?with_sysfs:BuildRequires:	libsysfs-devel}
+%{?with_sysfs:BuildRequires:	sysfsutils-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
