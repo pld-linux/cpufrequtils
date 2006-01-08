@@ -1,3 +1,5 @@
+# TODO:
+# - make separate package with libs only
 #
 # Conditional build:
 %bcond_without	sysfs	# sysfs
