@@ -24,12 +24,12 @@ Scales your CPU frequency.
 Skalowanie czêstotliwo¶ci procesora.
 
 %package libs
-Summary:	Library cpufrequtils
+Summary:	cpufrequtils library
 Summary(pl):	Biblioteka skaluj±ca czêstotliwo¶æ procesora
 Group:		Libraries
 
 %description libs
-Library cpufrequtils.
+cpufrequtils library.
 
 %description libs -l pl
 Biblioteka skaluj±ca czêstotliwo¶æ procesora.
