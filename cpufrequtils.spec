@@ -4,7 +4,7 @@
 %bcond_without	procfs	# procfs support
 #
 Summary:	Scales your CPU frequency
-Summary(pl.UTF-8):   Skalowanie częstotliwości procesora
+Summary(pl.UTF-8):	Skalowanie częstotliwości procesora
 Name:		cpufrequtils
 Version:	0.4
 Release:	3
@@ -25,7 +25,7 @@ Skalowanie częstotliwości procesora.
 
 %package libs
 Summary:	cpufrequtils library
-Summary(pl.UTF-8):   Biblioteka skalująca częstotliwość procesora
+Summary(pl.UTF-8):	Biblioteka skalująca częstotliwość procesora
 Group:		Libraries
 
 %description libs
@@ -36,7 +36,7 @@ Biblioteka skalująca częstotliwość procesora.
 
 %package devel
 Summary:	Header file for libcpufreq library
-Summary(pl.UTF-8):   Plik nagłówkowy biblioteki libcpufreq
+Summary(pl.UTF-8):	Plik nagłówkowy biblioteki libcpufreq
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 %{?with_sysfs:Requires:	sysfsutils-devel >= 1.3.0-3}
