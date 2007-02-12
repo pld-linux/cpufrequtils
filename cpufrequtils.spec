@@ -4,7 +4,7 @@
 %bcond_without	procfs	# procfs support
 #
 Summary:	Scales your CPU frequency
-Summary(pl):	Skalowanie czÍstotliwo∂ci procesora
+Summary(pl.UTF-8):   Skalowanie czƒôstotliwo≈õci procesora
 Name:		cpufrequtils
 Version:	0.4
 Release:	3
@@ -20,23 +20,23 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Scales your CPU frequency.
 
-%description -l pl
-Skalowanie czÍstotliwo∂ci procesora.
+%description -l pl.UTF-8
+Skalowanie czƒôstotliwo≈õci procesora.
 
 %package libs
 Summary:	cpufrequtils library
-Summary(pl):	Biblioteka skaluj±ca czÍstotliwo∂Ê procesora
+Summary(pl.UTF-8):   Biblioteka skalujƒÖca czƒôstotliwo≈õƒá procesora
 Group:		Libraries
 
 %description libs
 cpufrequtils library.
 
-%description libs -l pl
-Biblioteka skaluj±ca czÍstotliwo∂Ê procesora.
+%description libs -l pl.UTF-8
+Biblioteka skalujƒÖca czƒôstotliwo≈õƒá procesora.
 
 %package devel
 Summary:	Header file for libcpufreq library
-Summary(pl):	Plik nag≥Ûwkowy biblioteki libcpufreq
+Summary(pl.UTF-8):   Plik nag≈Ç√≥wkowy biblioteki libcpufreq
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 %{?with_sysfs:Requires:	sysfsutils-devel >= 1.3.0-3}
@@ -44,8 +44,8 @@ Requires:	%{name}-libs = %{version}-%{release}
 %description devel
 Header file for libcpufreq library.
 
-%description devel -l pl
-Plik nag≥Ûwkowy biblioteki libcpufreq.
+%description devel -l pl.UTF-8
+Plik nag≈Ç√≥wkowy biblioteki libcpufreq.
 
 %prep
 %setup -q
