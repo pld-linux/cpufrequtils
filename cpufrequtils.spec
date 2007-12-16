@@ -7,12 +7,13 @@ Summary:	Scales your CPU frequency
 Summary(pl.UTF-8):	Skalowanie częstotliwości procesora
 Name:		cpufrequtils
 Version:	002
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
 # Source0-md5:	93291a0d705ee2e19a6d7491b223c9f2
+Patch0:	%{name}-libtool.patch
 URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 BuildRequires:	libtool
 %{?with_sysfs:BuildRequires:	sysfsutils-devel >= 1.3.0-3}
@@ -63,6 +64,7 @@ Statyczna biblioteka libcpufreq.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
@@ -77,6 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	libdir=%{_libdir} \
 	mandir=%{_mandir}
 
 %find_lang %{name}
