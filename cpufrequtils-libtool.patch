@@ -1,0 +1,19 @@
+--- cpufrequtils-002/Makefile~	2006-06-01 11:54:41.000000000 +0300
++++ cpufrequtils-002/Makefile	2007-12-16 15:35:02.665877679 +0200
+@@ -177,14 +177,14 @@
+ 	@$(HOSTCC) -O1 build/ccdv.c -o build/ccdv
+ 
+ %.lo: $(LIB_OBJS) $(LIB_HEADERS)
+-	$(QUIET) $(LIBTOOL) $(LIBTOOL_OPT) --mode=compile $(CC) $(CFLAGDEF) $(CFLAGS) -o $@ -c $*.c
++	$(QUIET) $(LIBTOOL) $(LIBTOOL_OPT) --mode=compile --tag=CC $(CC) $(CFLAGDEF) $(CFLAGS) -o $@ -c $*.c
+ 
+ libcpufreq.la: $(LIB_OBJS) $(LIB_HEADERS) $(LIB_PARTS) Makefile
+ 	@if [ $(strip $(SYSFS)) != true -a $(strip $(PROC)) != true ]; then \
+ 		echo '*** At least one of /sys support or /proc support MUST be enabled ***'; \
+ 		exit -1; \
+ 	fi;
+-	$(QUIET) $(LIBTOOL) $(LIBTOOL_OPT) --mode=link $(CC) $(CFLAGDEF) $(CFLAGS) $(LDFLAGS) -o libcpufreq.la -rpath \
++	$(QUIET) $(LIBTOOL) $(LIBTOOL_OPT) --mode=link --tag=CC $(CC) $(CFLAGDEF) $(CFLAGS) $(LDFLAGS) -o libcpufreq.la -rpath \
+ 		${libdir} -version-info $(LIB_VERSION) $(LIB_PARTS)
+ 
+ libcpufreq: libcpufreq.la
