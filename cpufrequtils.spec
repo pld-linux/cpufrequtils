@@ -6,13 +6,13 @@
 Summary:	Scales your CPU frequency
 Summary(pl.UTF-8):	Skalowanie częstotliwości procesora
 Name:		cpufrequtils
-Version:	002
-Release:	2
+Version:	003
+Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
-# Source0-md5:	93291a0d705ee2e19a6d7491b223c9f2
+# Source0-md5:	5263d82a20e6638adf6461de6e307f26
 Patch0:	%{name}-libtool.patch
 URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 BuildRequires:	libtool
