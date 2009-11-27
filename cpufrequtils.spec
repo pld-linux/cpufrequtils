@@ -13,8 +13,9 @@ License:	GPL v2
 Group:		Applications/System
 Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
 # Source0-md5:	73a41589fe74b73fc530f4179f2c6142
-Patch0:	%{name}-libtool.patch
+Patch0:		%{name}-libtool.patch
 URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
 %{?with_sysfs:BuildRequires:	sysfsutils-devel >= 1.3.0-3}
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
