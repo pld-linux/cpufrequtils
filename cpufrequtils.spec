@@ -11,9 +11,12 @@ Release:	1
 Epoch:		1
 License:	GPL v2
 Group:		Applications/System
-Source0:	http://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
+#Source0:	https://www.kernel.org/pub/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.sunet.se/pub/Linux/kernel.org/linux/utils/kernel/cpufreq/%{name}-%{version}.tar.bz2
 # Source0-md5:	c59b71c044d463896f3247e8dd83dd7e
-URL:		http://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+# 404 as of Dec 2013, use mirror
+#URL:		https://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+URL:		http://ftp.sunet.se/pub/Linux/kernel.org/linux/utils/kernel/cpufreq/cpufrequtils.html
 BuildRequires:	gettext-devel
 %{?with_sysfs:BuildRequires:	sysfsutils-devel >= 1.3.0-3}
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
