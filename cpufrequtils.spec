@@ -17,7 +17,7 @@ Source0:	http://ftp.sunet.se/pub/Linux/kernel.org/linux/utils/kernel/cpufreq/%{n
 # 404 as of Dec 2013, use mirror
 #URL:		https://www.kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
 URL:		http://ftp.sunet.se/pub/Linux/kernel.org/linux/utils/kernel/cpufreq/cpufrequtils.html
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 %{?with_sysfs:BuildRequires:	sysfsutils-devel >= 1.3.0-3}
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
