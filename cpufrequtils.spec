@@ -7,7 +7,7 @@ Summary:	Scaling your CPU frequency
 Summary(pl.UTF-8):	Skalowanie częstotliwości procesora
 Name:		cpufrequtils
 Version:	008
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL v2
 Group:		Applications/System
