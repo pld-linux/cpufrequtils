@@ -7,7 +7,7 @@ Summary:	Scaling your CPU frequency
 Summary(pl.UTF-8):	Skalowanie częstotliwości procesora
 Name:		cpufrequtils
 Version:	008
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL v2
 Group:		Applications/System
@@ -46,6 +46,7 @@ Group:		Development/Libraries
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 %{?with_sysfs:Requires:	sysfsutils-devel >= 1.3.0-3}
 Obsoletes:	cpufrequtils-static
+Conflicts:	kernel-tools-cpupower-libs-devel
 
 %description devel
 Header file for libcpufreq library.
